@@ -14,6 +14,7 @@ next.addEventListener('click', () => {
         progress.style.width = (currentWidth.toString() + '%');
         circles[currentStep - 1].classList.add('active');
     }
+    updateButtons();
 });
 
 prev.addEventListener('click', () => {
@@ -22,5 +23,18 @@ prev.addEventListener('click', () => {
         currentWidth -= step;
         progress.style.width = (currentWidth.toString() + '%');
         circles[currentStep].classList.remove('active');
+        prev.disabled = false;
     }
+    updateButtons();
 });
+
+function updateButtons() {
+    if(currentStep === 1) {
+        prev.disabled = true
+    } else if(currentStep === circles.length) {
+        next.disabled = true
+    } else {
+        prev.disabled = false
+        next.disabled = false
+    }
+}
