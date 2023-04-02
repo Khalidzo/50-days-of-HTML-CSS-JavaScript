@@ -10,45 +10,70 @@
   --speed: 1000ms;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
   height: 100vh;
   overflow: hidden;
-  margin: 0;
 }
 
-h1 {
-  font-size: 4rem;
-  color: #fff;
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.split {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.split h1 {
   position: absolute;
   left: 50%;
-  top: 20%;
   transform: translateX(-50%);
+  top: 20%;
+  color: #fff;
+  font-size: 55px;
   white-space: nowrap;
 }
 
+.split.left {
+  left: 0;
+  background-image: url(ps.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: width 1.2s ease-in-out;
+}
+
+.split.right {
+  right: 0;
+  background-image: url(xbox.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: width 1.2s ease-in-out;
+}
+
 .btn {
-    background-color: transparent;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 50%;
-    top: 40%;
-    transform: translateX(-50%);
-    text-decoration: none;
-    color: #fff;
-    border: #fff solid 0.2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 15rem;
-    padding: 1.5rem;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  padding: 22px;
+  width: 230px;
+  border: #fff solid 3.5px;
+  cursor: pointer;
+  transition: background-color 0.2s linear; 
+  transform: translateX(-50%);
 }
 
 .split.left .btn:hover {
@@ -61,55 +86,20 @@ h1 {
   border-color: var(--right-btn-hover-color);
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #333;
-}
-
-.split {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.split.left {
-  left: 0;
-  background: url('ps.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .split.left::before {
-  content: '';
+  content: "";
   position: absolute;
+  background-color: var(--left-bg-color);
   width: 100%;
   height: 100%;
-  background-color: var(--left-bg-color);
-}
-
-.split.right {
-  right: 0;
-  background: url('xbox.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .split.right::before {
-  content: '';
+  content: "";
   position: absolute;
+  background-color: var(--right-bg-color);
   width: 100%;
   height: 100%;
-  background-color: var(--right-bg-color);
-}
-
-.split.right,
-.split.left,
-.split.right::before,
-.split.left::before {
-  transition: all var(--speed) ease-in-out;
 }
 
 .hover-left .left {
@@ -130,12 +120,11 @@ h1 {
 
 @media (max-width: 800px) {
   h1 {
-    font-size: 2rem;
-    top: 30%;
+    font-size: 32px;
   }
 
   .btn {
     padding: 1.2rem;
-    width: 12rem;
+    width: 180px;
   }
 }
