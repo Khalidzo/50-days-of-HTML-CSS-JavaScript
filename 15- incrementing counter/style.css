@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+body {
+    background-color: #8e44ad;
+    color: #fff;
+    font-family: 'Roboto Mono';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container-content {
+    text-align: center;
+    margin: 0 45px;
+}
+
+.logo {
+    font-size: 45px;
+}
+
+.number {
+    font-size: 55px;
+    margin: 8px 0 5px;
+}
+
+.description {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@media (max-width: 580px) {
+    body {
+      flex-direction: column;
+    }
+}
+  
