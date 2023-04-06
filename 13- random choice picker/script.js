@@ -35,11 +35,11 @@ function randomSelect() {
         highlightTag(randomTag);
 
         setTimeout(() => {
-            unHighlightTag(randomTag)
+            unHighlightTag(randomTag);
         }, 100);
 
     }, 100);
-
+    
     setTimeout(() => {
         clearInterval(interval);
 
