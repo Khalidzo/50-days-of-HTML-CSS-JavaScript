@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #222;
+    margin: 0;
+}
+
+.nav {
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav h1 {
+    margin: 20px;
+}
+
+.nav.active h1 {
+    margin: 10px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+
+.nav-container ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container li {
+    font-size: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav a:hover {
+    color: #b33600;
+}
+
+nav.active {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav.active a {
+    color: #222;
+}
+
+.main-container {
+    background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: -2;
+}
+
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.main-container .title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.main-container p {
+    margin-top: 0;
+    font-size: 1.15rem;
+    letter-spacing: 3px;
+}
+
+.content-container {
+    background-color: white;
+    padding: 10px 150px 15px;
+}
+
+.content-container p{
+    letter-spacing: 2px;
+    line-height: 30px;
+    font-weight: 100;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        padding: 30px 80px 40px;
+    }
+}
