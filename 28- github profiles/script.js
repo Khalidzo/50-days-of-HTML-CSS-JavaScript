@@ -12,22 +12,24 @@ form.addEventListener('submit', (e) => {
     if (username) {
         getUserInfo(username);
         search.value = '';
-        main.innerHTML = '';
     }
-    
 });
 
 async function getUserInfo(username) {
     // fetch api
-    try {
-        const response = await fetch(SEARCH_API + username);
-        const data = await response.json();
-    } catch (err) {
-        console.log('wtf');
+    const response = await fetch(SEARCH_API + username);
+    let data;
+    if (response.ok) {
+        data = await response.json();
+    } else if (response.status == 404) {
+        createErrorCard(`${response.status}:User not found!`);
+        return;
+    } else {
+        createErrorCard(`${response.status} Unexpected error`);
+        return;
     }
-    finally {
-        console.log('wtf');
-    }
+
+    main.innerHTML = '';
     // extract needed info
     const name = data.name;
     const bio = data.bio;
@@ -103,7 +105,6 @@ function createErrorCard(msg) {
         <div class="user-container">
             <h1>${msg}</h1>
         </div>
-    `
-
-    main.innerHTML = cardHTML
+    `;
+    main.innerHTML = cardHTML;
 }
