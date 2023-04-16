@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #19376D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.search-box {
+    background-color: #4d5fa9;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    color: #e0e0e0;
+    border: none;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    font-family: inherit;
+}
+
+.search-box:focus {
+    outline: none;
+}
+
+.search-box::placeholder {
+    color: #e0e0e0;
+}
+
+.user-container {
+    display: flex;
+    margin: 20px 0;
+    background-color: #4d5fa9;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    color: #eee;
+    padding: 50px;
+    border: none;
+    border-radius: 20px;
+}
+
+.user-container img {
+    background-image: url('https://avatars.githubusercontent.com/u/78038233?v=4');
+    width: 130px;
+    height: 130px;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    border-color:#38467f ;
+    border: 8px solid #38467f;
+    margin-right: 20px;
+}
+
+.user-container h2 {
+    margin-top: 0;
+}
+
+.user-info ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style-type: none;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.repo {
+    text-decoration: none;
+    color: #fff;
+    background-color: #38467f;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
