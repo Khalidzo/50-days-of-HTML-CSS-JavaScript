@@ -22,10 +22,10 @@ async function getUserInfo(username) {
     if (response.ok) {
         data = await response.json();
     } else if (response.status == 404) {
-        createErrorCard(`${response.status}:User not found!`);
+        createErrorCard(`${response.status}: User not found!`);
         return;
     } else {
-        createErrorCard(`${response.status} Unexpected error`);
+        createErrorCard(`${response.status}: Unexpected error`);
         return;
     }
 
@@ -80,7 +80,7 @@ async function getRepos(reposURL) {
 
     if (data != '') {
         // sort by the most recent
-        const newData = data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+        data = data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
         // get the most 5 recent repos
         for (let i=0; i<5; i++) {
