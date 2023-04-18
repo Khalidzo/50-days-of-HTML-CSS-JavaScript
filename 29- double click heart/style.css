@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0 5px;
+}
+
+.header strong {
+    font-size: 1.3rem;
+}
+
+.header p {
+    margin-top: 5px;
+}
+
+.image {
+    background-image: url('https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=452&q=80');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 430px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.heart {
+    font-size: 2.3rem;
+    position: absolute;
+    transform-origin: center;
+    animation: heartAnimation 0.5s linear;
+    pointer-events: none;
+}
+
+@keyframes heartAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    25% {
+        transform: scale(1.5);
+        opacity: 0.75;
+    }
+    50% {
+        transform: scale(2.5);
+        opacity: 0.75;
+    }
+    75% {
+        transform: scale(3.5);
+        opacity: 0.75;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
