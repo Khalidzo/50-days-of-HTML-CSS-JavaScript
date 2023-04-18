@@ -48,6 +48,7 @@ body {
     transform-origin: center;
     animation: heartAnimation 0.5s linear;
     pointer-events: none;
+    animation-fill-mode: forwards;
 }
 
 @keyframes heartAnimation {

@@ -28,7 +28,6 @@ function spawnHeart(pos) {
     heartEl.style.top = `${pos.y - 12}px`;
     heartEl.style.color = '#c51104';
     
-    console.log(pos, 'hello');
     // add heart element to the parent element
     image.appendChild(heartEl);
 
