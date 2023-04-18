@@ -67,7 +67,7 @@ body {
     }
     75% {
         transform: scale(3.5);
-        opacity: 0.75;
+        opacity: 0.50;
     }
     100% {
         transform: scale(4);
