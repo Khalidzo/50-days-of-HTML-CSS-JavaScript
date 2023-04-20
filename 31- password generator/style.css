@@ -15,7 +15,7 @@ body {
     overflow: hidden;
     margin: 0;
 }
-/* 0B2447 */
+
 .container {
     background-color: #19376D;
     display: flex;
@@ -29,6 +29,9 @@ body {
     background-color: #0B2447;
     width: 95%;
     height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .container h2 {
@@ -69,4 +72,20 @@ body {
     border: none;
     cursor: pointer;
     font-size: 0.95rem;
+}
+
+.clipboard-btn {
+    position: absolute;
+    background-color: #576CBC;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 1.3rem;
+    padding: 3px 8px;
+    right: 5px;
+}
+
+.display-box p {
+    margin: 0 10px;
+    letter-spacing: 1px;
 }
