@@ -15,7 +15,7 @@ function playAnimation() {
     setTimeout(() => {
         counter.classList.add('hide');
         final.classList.add('show');
-    }, 1000 * numbers.length * 1.2);
+    }, 1000 * numbers.length * 1.21);
 }
 
 function animateNumber(number, index) {
