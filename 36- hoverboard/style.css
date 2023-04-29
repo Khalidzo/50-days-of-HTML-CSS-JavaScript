@@ -23,8 +23,13 @@ body {
 
 .box {
     background-color: rgb(29, 29, 29);
+    box-shadow: 0 0 2px #000;
     width: 16px;
     height: 16px;
     margin: 2px;
     transition: 2s ease;
 }
+
+.box:hover {
+    transition-duration: 0s;
+  }
