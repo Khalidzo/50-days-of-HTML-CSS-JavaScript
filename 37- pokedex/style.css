@@ -41,6 +41,7 @@ body {
 }
 
 .img-container {
+    background-color: rgba(255, 255, 255, 0.6);
     width: 120px;
     height: 120px;
     border-radius: 50%;

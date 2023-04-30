@@ -13,8 +13,7 @@ const colorCategories = {   redCategory: ['fighting', 'fire', 'dark', 'dragon'],
                             lightCategory: ['normal', 'ice', 'fairy', 'steel'],
                             blueCategory: ['dark', 'flying', 'water', 'electric', 'fairy']};
 
-/* createPokemon('1');
-createPokemon('1'); */
+
 createPokemons();
 
 async function createPokemons() {
