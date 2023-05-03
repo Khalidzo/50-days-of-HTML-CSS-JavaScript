@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    border: black solid;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.number-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.number-container input {
+    width: 100px;
+    height: 120px;
+    font-size: 75px;
+    text-align: center;
+    border: 1px solid #eee;
+    margin: 1%;
+}
+
+.number-container input:focus {
+    outline-color: #000;
+}
+
+.number-container input.active {
+    border-color: #3498db;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+}
+
+.number-container input::-webkit-outer-spin-button,
+.number-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.info {
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 10px;
+    line-height: 20px;
+    max-width: 400px;
+    color: #777;
+    border-radius: 5px;
+}
