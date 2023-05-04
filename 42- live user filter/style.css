@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.header {
+    background-color: #3e57db;
+    color: #fff;
+    padding: 25px 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.header h3 {
+    margin: 0 auto;
+}
+
+.header p {
+    opacity: 0.8;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+#search {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    font-size: 0.9rem;
+    border-radius: 20px;
+}
+
+#search:focus {
+    outline: none;
+}
+
+.users-container {
+    margin: 0;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.user {
+    display: flex;
+    padding: 20px;
+}
+
+.user.hide {
+    display: none;
+}
+
+.user img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user .user-info {
+    margin-left: 10px;
+}
+
+.user .user-info h4{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.user .user-info p{
+    margin-top: 5px;
+    font-size: 0.7rem;
+}
+.user:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
