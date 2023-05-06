@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    background-color: #fef9f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 20px 15px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    display: none;
+}
+
+.container.active {
+    display: flex;
+}
+
+.review-container h4 {
+    text-align: center;
+}
+
+.reviews {
+    display: flex;
+    margin: 2px 10px 20px;
+}
+
+.review {
+    text-align: center;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.review.active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.review:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    margin: 0 20px;
+}
+
+.review p {
+    margin-top: 0;
+    font-size: 0.8rem;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.thanks-container p{
+    margin: 0;
+    text-align: center;
+}
+
+.thanks-container h4 {
+    margin-bottom: 5px;
+}
+
+.thanks-container .feedback {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.thanks-container span {
+    text-transform: capitalize;
+}
