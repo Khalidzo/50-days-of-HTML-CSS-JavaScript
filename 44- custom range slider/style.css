@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    background-color: #fef9f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+h2 {
+    position: absolute;
+    top: 0;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 300px;
+    background-color: purple;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: white;
+    border: solid 1px purple;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+.slidecontainer {
+    position: relative;
+}
+
+.indicator {
+    font-family: inherit;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    width: 80px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: 600;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
