@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/34773be752.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Quizz App</title>
+</head>
+<body>
+    <div class="question active">
+        <h2>Which Language runs in a web browser?</h2>
+        <form onsubmit="event.preventDefault();">
+            <ul>
+                <li>
+                  <input type="radio" name="answer" value="Java">
+                  <label for="q1_1">Java</label></li>
+                <li>
+                  <input type="radio" name="answer" value="C">
+                  <label for="q1_2">C</label>
+                </li>
+                <li>
+                  <input type="radio" name="answer" value="Python">
+                  <label for="q1_3">Python</label>
+                </li>
+                <li>
+                  <input type="radio" name="answer" value="JavaScript">
+                  <label for="q1_4">JavaScript</label>
+                </li>
+              </ul>
+              <button>Submit</button>
+        </form>
+        
+    </div>
+    <div class="question">
+        <h2>What does CSS stand for?</h2>
+        <form onsubmit="event.preventDefault();">
+            <ul>
+                <li>
+                  <input type="radio" name="answer" value="Central Style Sheets">
+                  <label for="q2_1">Central Style Sheets</label></li>
+                <li>
+                  <input type="radio" name="answer" value="Cascading Style Sheets" >
+                  <label for="q2_2">Cascading Style Sheets</label>
+                </li>
+                <li>
+                  <input type="radio" name="answer" value="Cascading Simple Sheets">
+                  <label for="q2_3">Cascading Simple Sheets</label>
+                </li>
+                <li>
+                  <input type="radio" name="answer" value="Cars SUVs Sailboats">
+                  <label for="q2_4">Cars SUVs Sailboats</label>
+                </li>
+              </ul>
+              <button>Submit</button>
+        </form>
+    </div>
+    <div class="question">
+        <h2>What does HTML stand for?</h2>
+        <form onsubmit="event.preventDefault();">
+            <ul>
+                <li>
+                  <input type="radio" name="answer" value="Hypertext Markup Language" >
+                  <label for="q3_1">Hypertext Markup Language</label></li>
+                <li>
+                  <input type="radio" name="answer" value="Hypertext Markdown Language" >
+                  <label for="q3_2">Hypertext Markdown Language</label>
+                </li>
+                <li>
+                  <input type="radio" name="answer" value="Hyperloop Machine Language">
+                  <label for="q3_3">Hyperloop Machine Language</label>
+                </li>
+                <li>
+                  <input type="radio" name="answer" value="Helicopters Terminals Motorboats Lamborginis">
+                  <label for="q3_4">Helicopters Terminals Motorboats Lamborginis</label>
+                </li>
+              </ul>
+              <button>Submit</button>
+        </form>
+    </div>
+    <div class="repeat">
+      <h2 class="result">variable</h2>
+      <button id="reload">Reload</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
